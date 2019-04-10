@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>S'inscrire | TrocBenin  </title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Bluesky template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.css') }}">
+<link href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/animate.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main_styles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/newstyle.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.css') }}">
+</head>
+<body>
+
+<div class="super_container">
+
+    <!-- Header -->
+
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="logo">
+                            <a href="#"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <nav class="main_nav">
+                            <ul>
+                                <li class="active"><a href="index.html">Acceuil</a></li>
+                                <li><a href="about.html">A propos</a></li>
+                                <li><a href="properties.html">Troquer</a></li>
+                                <li><a href="news.html">Journal</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="phone_num ml-auto">
+                            <div class="phone_num_inner">
+                                <span><a href="#" style="color: white;"><i class="fa fa-user-o" aria-hidden="true"></i> Mon Compte </a></span>
+                            </div>
+                        </div>
+                        <div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <!--login from-->
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6" id="registerdiv">
+            <div class="login-wrapper">
+       
+                <div class="container-center lg">
+                    <div class="panel panel-bd">
+                        <div class="panel-heading">
+                            <div class="view-header">
+                                <div class="header-icon">
+                                    <i class="pe-7s-unlock"></i>
+                                </div>
+                                <div class="header-title">
+                                    <h3>Inscrivez-vous</h3>
+                                    <small><strong>Remplissez le formulaire pour vous inscrire</strong></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form method="POST" action="/register" id="loginForm" novalidate>
+                                <div class="row">
+                                    <div class="form-group col-lg-6">
+                                        <label>Nom</label>
+                                        <input type="text" value="{{ lastname }}" required class="form-control" name="lastname">
+                                        <span class="help-block small">Entrez votre nom</span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Prenom</label>
+                                        <input type="text" value="{{ firstname }}" required class="form-control" name="firstname">
+                                        <span class="help-block small">Entrez votre prenom</span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Addresse</label>
+                                        <input type="text" value="{{ address }}" required class="form-control" name="address">
+                                        <span class="help-block small">Entrez votre addresse</span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Numero</label>
+                                        <input type="tel" value="{{ telephone }}" required class="form-control" name="telephone">
+                                        <span class="help-block small">Entrez votre numbero de telephone</span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Mot de passe</label>
+                                        <input type="password" value="{{ password }}" required id="password" class="form-control" name="password">
+                                        <span class="help-block small">Au moins six caractères</span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Répéter le mot de passe</label>
+                                        <input type="password" value="{{ password }}" required id="repeatpassword" class="form-control" name="repeatpassword">
+                                        <span class="help-block small">Veuillez répéter votre mot de passe</span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label>Adresse électronique</label>
+                                        <input type="email" value="{{ email }}" required id="email" class="form-control" name="email">
+                                        <span class="help-block small">Votre adresse email à contacter</span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <span class="help-block small">  {{ message }}</span>
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <button class="btn btn-warning">Inscrivez-vous</button>
+                                    <a class="btn btn-primary" href="login">Se Connecter</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    <div class="col-sm-3"></div>
+</div>
+
+    <!--end login form-->
+
+    
+
+<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='styles/bootstrap4/popper.js') }}"></script>
+<script src="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/easing/easing.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/parallax-js-master/parallax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+</body>
+
+</html>

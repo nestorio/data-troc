@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Connexion | TrocBenin</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Bluesky template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.css') }}">
+<link href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/animate.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main_styles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/newstyle.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.css') }}">
+</head>
+<body>
+
+<div class="super_container">
+
+    <!-- Header -->
+
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="logo">
+                            <a href="#"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <nav class="main_nav">
+                            <ul>
+                                <li class="active"><a href="index.html">Acceuil</a></li>
+                                <li><a href="about.html">A propos</a></li>
+                                <li><a href="properties.html">Troquer</a></li>
+                                <li><a href="news.html">Journal</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="phone_num ml-auto">
+                            <div class="phone_num_inner">
+                                <span><a href="#" style="color: white;"><i class="fa fa-user-o" aria-hidden="true"></i> Mon Compte </a></span>
+                            </div>
+                        </div>
+                        <div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <!--login from-->
+    <div class="row">
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-6" id="logindiv">
+
+            <div class="login-wrapper">
+            <div class="container-center">
+                <div class="panel panel-bd">
+                    <div class="panel-heading">
+                        <div class="view-header">
+                            <div class="header-icon">
+                                <i class="pe-7s-unlock"></i>
+                            </div>
+                            <div class="header-title">
+                                <h3>Se Connecter</h3>
+                                <small><strong>Veuillez entrer vos identifiants pour vous connecter</strong></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form method="POST" action="/login" id="loginForm" novalidate>
+                            <div class="form-group">
+                                <label class="control-label" for="username">Nom d'utilisateur</label>
+                                <input type="text" placeholder="example@gmail.com" title="S'il vous plaît entrez votre nom d'utilisateur" required="true"  name="username" id="username" class="form-control">
+                                <span class="help-block small">Votre identifiant unique</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="password">Mot de passe</label>
+                                <input type="password" title="Please enter your password" placeholder="******" required="true" name="password" id="password" class="form-control">
+                                <span class="help-block small">Votre mot de passe</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary">Se Connecter</button>
+                                <a class="btn btn-warning" href="register">Inscrivez-vous</a>
+                            </div>
+                            <div style="color: red;">{{ show }}</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+
+    <!--end login form-->
+
+    
+
+<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='styles/bootstrap4/popper.js') }}"></script>
+<script src="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/easing/easing.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/parallax-js-master/parallax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+
+#menu {
+  position: fixed;
+  display: auto;
+  right: left;
+  top: 17%;
+  
+  margin-top: -2.5em;
+  background: #3f6fced9;
+  color: white;
+  padding: 1em;
+  padding-top: 2.5em;
+  border: transparent;
+  border-radius: 5px;
+  
+}
+.sidelink{
+  color: white;
+  float: right;
+}
+.sidelink:hover{
+  color: #2cd983;
+}
+.active{
+  color: #2cd983;
+}
+body{
+  min-width: 550px;
+}
