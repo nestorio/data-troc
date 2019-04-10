@@ -1,0 +1,2 @@
+pymongo==3.7.2
+flask_jwt_extended==3.18.0
