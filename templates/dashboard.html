@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Acceuil | Username</title>
+<title>Acceuil | {{ username }}</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Bluesky template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/simple-sidebar.css">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/properties.css">
-<link rel="stylesheet" type="text/css" href="styles/properties_responsive.css">
-<link rel="stylesheet" type="text/css" href="styles/simple-sidebar.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/simple-sidebar.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.css') }}">
+<link href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/animate.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/properties.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/properties_responsive.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/simple-sidebar.css') }}">
 
 </head>
 <body>
@@ -29,7 +29,7 @@
                 <div class="col">
                     <div class="header_content d-flex flex-row align-items-center justify-content-start">
                         <div class="logo">
-                            <a href="#"><img src="images/logo.png" alt=""></a>
+                            <a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></a>
                         </div>
                         <nav class="main_nav">
                             <ul>
@@ -60,7 +60,7 @@
 			<div class="logo menu_logo">
 				<a href="#">
 					<div class="logo_container d-flex flex-row align-items-start justify-content-start">
-						<div class="logo_image"><div><img src="images/logo.png" alt=""></div></div>
+						<div class="logo_image"><div><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></div></div>
 					</div>
 				</a>
 			</div>
@@ -72,23 +72,23 @@
 				<li class="menu_item"><a href="contact.html">Contact</a></li>
 			</ul>
 		</div>
-		
+
 	</div>
-	
+
 	<!-- Home -->
 
 	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/properties.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ url_for('static', filename='images/properties.jpg') }}" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content d-flex flex-row align-items-end justify-content-start">
-							<div class="home_title">Bienvenue Username</div>
+							<div class="home_title">Bienvenue {{ username }}</div>
 							<div class="breadcrumbs ml-auto">
 								<ul>
 									<li><a href="index.html">Acceuil</a></li>
-									<li>Username</li>
+									<li>{{ username }}</li>
 								</ul>
 							</div>
 						</div>
@@ -99,15 +99,15 @@
 	</div>
 
 	<!-- Home Search -->
-	
+
 	<ul id="menu" class="header">
 		<a class="sidelink" href="#">&nbsp;<i class="fa fa-level-up" aria-hidden="true"></i> Mes Propositions </a>
 		<a class="sidelink" href="#">&nbsp;<i class="fa fa-envelope-open-o" aria-hidden="true"></i> Message | </a>
 		<a class="sidelink" href="#">&nbsp;<i class="fa fa-location-arrow" aria-hidden="true"></i> Mes Trocs | </a>
 		<a class="sidelink" href="#">&nbsp;<i class="fa fa-arrows-h" aria-hidden="true"></i> Troquer | </a>
 		<a class="sidelink active" href="#">&nbsp;<i class="fa fa-tachometer" aria-hidden="true"></i> Tableau de bord | </a>
-		
-		
+
+
 	</ul>
 
 	<!-- Properties -->
@@ -124,12 +124,12 @@
 
 			<div class="row properties_row">
 
-				
+
 				<!-- Property -->
 				<div class="col-xl-3 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="images/property_1.jpg" alt="">
+							<img src="{{ url_for('static', filename='images/property_1.jpg') }}" alt="">
 							<div class="tag_featured property_tag"><a href="#">Vehicule</a></div>
 						</div>
 						<div class="property_body text-center">
@@ -140,7 +140,7 @@
 						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
 							<div><div class="property_icon"><i class="fa fa-hashtag" aria-hidden="true"></i></div><span>6 Propos</span></div>
 							<div><div class="property_icon"><i class="fa fa-bullseye" style="color: #32f996;" aria-hidden="true"></i></div><span>En troc</span></div>
-							
+
 						</div>
 					</div>
 				</div>
@@ -149,7 +149,7 @@
 				<div class="col-xl-3 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="images/property_2.jpg" alt="">
+							<img src="{{ url_for('static', filename='images/property_2.jpg') }}" alt="">
 							<div class="tag_offer property_tag"><a href="#">Immobilier</a></div>
 						</div>
 						<div class="property_body text-center">
@@ -168,7 +168,7 @@
 				<div class="col-xl-3 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="images/property_3.jpg" alt="">
+							<img src="{{ url_for('static', filename='images/property_3.jpg') }}" alt="">
 							<div class="tag_featured property_tag"><a href="#">Immobilier</a></div>
 						</div>
 						<div class="property_body text-center">
@@ -187,7 +187,7 @@
 				<div class="col-xl-3 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="images/property_4.jpg" alt="">
+							<img src="{{ url_for('static', filename='images/property_4.jpg') }}" alt="">
 							<div class="tag_new property_tag"><a href="#">Vetement</a></div>
 						</div>
 						<div class="property_body text-center">
@@ -203,7 +203,7 @@
 				</div>
 				<!-- Property -->
 				<!-- Property -->
-				
+
 				<!-- Property -->
 
 			</div>
@@ -234,12 +234,12 @@
 
 			<div class="row properties_row">
 
-				
+
 				<!-- Property -->
 				<div class="col-xl-3 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="images/property_1.jpg" alt="">
+							<img src="{{ url_for('static', filename='images/property_1.jpg') }}" alt="">
 							<div class="tag_featured property_tag"><a href="#">Vehicule</a></div>
 						</div>
 						<div class="property_body text-center">
@@ -250,7 +250,7 @@
 						<div class="property_footer d-flex flex-row align-items-center justify-content-start">
 							<div><div class="property_icon"><i class="fa fa-hashtag" aria-hidden="true"></i></div><span>6 Propos</span></div>
 							<div><div class="property_icon"><i class="fa fa-bullseye" style="color: #32f996;" aria-hidden="true"></i></div><span>En troc</span></div>
-							
+
 						</div>
 					</div>
 				</div>
@@ -259,7 +259,7 @@
 				<div class="col-xl-3 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="images/property_2.jpg" alt="">
+							<img src="{{ url_for('static', filename='images/property_2.jpg') }}" alt="">
 							<div class="tag_offer property_tag"><a href="#">Immobilier</a></div>
 						</div>
 						<div class="property_body text-center">
@@ -278,7 +278,7 @@
 				<div class="col-xl-3 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="images/property_3.jpg" alt="">
+							<img src="{{ url_for('static', filename='images/property_3.jpg') }}" alt="">
 							<div class="tag_featured property_tag"><a href="#">Immobilier</a></div>
 						</div>
 						<div class="property_body text-center">
@@ -297,7 +297,7 @@
 				<div class="col-xl-3 col-lg-6 property_col">
 					<div class="property">
 						<div class="property_image">
-							<img src="images/property_4.jpg" alt="">
+							<img src="{{ url_for('static', filename='images/property_4.jpg') }}" alt="">
 							<div class="tag_new property_tag"><a href="#">Vetement</a></div>
 						</div>
 						<div class="property_body text-center">
@@ -313,7 +313,7 @@
 				</div>
 				<!-- Property -->
 				<!-- Property -->
-				
+
 				<!-- Property -->
 
 			</div>
@@ -334,7 +334,7 @@
 	<!-- Newsletter -->
 
 	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ url_for('static', filename='images/newsletter.jpg') }}" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -362,7 +362,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3">
-						<div class="footer_logo"><a href="#"><img src="images/logo_large.png" alt=""></a></div>
+						<div class="footer_logo"><a href="#"><img src="{{ url_for('static', filename='images/logo_large.png') }}" alt=""></a></div>
 					</div>
 					<div class="col-lg-9 d-flex flex-column align-items-start justify-content-end">
 						<div class="footer_title">Dernières trocs</div>
@@ -376,7 +376,7 @@
 					</div>
 					<div class="col-lg-3 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
-							<div><div class="footer_latest_image"><img src="images/footer_latest_1.jpg" alt=""></div></div>
+							<div><div class="footer_latest_image"><img src="{{ url_for('static', filename='images/footer_latest_1.jpg') }}" alt=""></div></div>
 							<div class="footer_latest_content">
 								<div class="footer_latest_location">Porto-Novo</div>
 								<div class="footer_latest_name"><a href="#">Grande maison</a></div>
@@ -386,7 +386,7 @@
 					</div>
 					<div class="col-lg-3 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
-							<div><div class="footer_latest_image"><img src="images/footer_latest_2.jpg" alt=""></div></div>
+							<div><div class="footer_latest_image"><img src="{{ url_for('static', filename='images/footer_latest_2.jpg') }}" alt=""></div></div>
 							<div class="footer_latest_content">
 								<div class="footer_latest_location">Cotonou</div>
 								<div class="footer_latest_name"><a href="#">Camry 2015</a></div>
@@ -396,7 +396,7 @@
 					</div>
 					<div class="col-lg-3 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
-							<div><div class="footer_latest_image"><img src="images/footer_latest_3.jpg" alt=""></div></div>
+							<div><div class="footer_latest_image"><img src="{{ url_for('static', filename='images/footer_latest_3.jpg') }}" alt=""></div></div>
 							<div class="footer_latest_content">
 								<div class="footer_latest_location">Abomey</div>
 								<div class="footer_latest_name"><a href="#">Parcelle de terre</a></div>
@@ -434,18 +434,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/properties.js"></script>
+<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='styles/bootstrap4/popper.js') }}"></script>
+<script src="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/greensock/TweenMax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/greensock/TimelineMax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/scrollmagic/ScrollMagic.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/greensock/animation.gsap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/greensock/ScrollToPlugin.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/easing/easing.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/parallax-js-master/parallax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/properties.js') }}"></script>
 
 <!-- Menu Toggle Script -->
 <script>

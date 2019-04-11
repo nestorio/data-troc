@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Acceuil | Username</title>
+<title>Troquer | {{ username }}</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Bluesky template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/simple-sidebar.css">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/properties.css">
-<link rel="stylesheet" type="text/css" href="styles/properties_responsive.css">
-<link rel="stylesheet" type="text/css" href="styles/simple-sidebar.css">
-<link href="image-uploader/dist/css/bootstrap-imageupload.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/simple-sidebar.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.css') }}">
+<link href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/animate.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/properties.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/properties_responsive.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/simple-sidebar.css') }}">
+<link href="{{ url_for('static', filename='image-uploader/dist/css/bootstrap-imageupload.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -30,7 +30,7 @@
                 <div class="col">
                     <div class="header_content d-flex flex-row align-items-center justify-content-start">
                         <div class="logo">
-                            <a href="#"><img src="images/logo.png" alt=""></a>
+                            <a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></a>
                         </div>
                         <nav class="main_nav">
                             <ul>
@@ -61,7 +61,7 @@
 			<div class="logo menu_logo">
 				<a href="#">
 					<div class="logo_container d-flex flex-row align-items-start justify-content-start">
-						<div class="logo_image"><div><img src="images/logo.png" alt=""></div></div>
+						<div class="logo_image"><div><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></div></div>
 					</div>
 				</a>
 			</div>
@@ -73,23 +73,23 @@
 				<li class="menu_item"><a href="contact.html">Contact</a></li>
 			</ul>
 		</div>
-		
+
 	</div>
-	
+
 	<!-- Home -->
 
 	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/properties.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ url_for('static', filename='images/properties.jpg') }}" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content d-flex flex-row align-items-end justify-content-start">
-							<div class="home_title">Bienvenue Username</div>
+							<div class="home_title">Bienvenue {{ username }}</div>
 							<div class="breadcrumbs ml-auto">
 								<ul>
-									<li><a href="index.html">Acceuil</a></li>
-									<li>Username</li>
+									<li><a href="index.html">Troquer</a></li>
+									<li>{{ username }}</li>
 								</ul>
 							</div>
 						</div>
@@ -99,7 +99,7 @@
 		</div>
 	</div>
 
-	
+
 	<!-- second top menu -->
 	<ul id="menu" class="header">
 		<a class="sidelink" href="#">&nbsp;<i class="fa fa-level-up" aria-hidden="true"></i> Mes Propositions </a>
@@ -107,8 +107,8 @@
 		<a class="sidelink" href="#">&nbsp;<i class="fa fa-location-arrow" aria-hidden="true"></i> Mes Trocs | </a>
 		<a class="sidelink active" href="#">&nbsp;<i class="fa fa-arrows-h" aria-hidden="true"></i> Troquer | </a>
 		<a class="sidelink" href="#">&nbsp;<i class="fa fa-tachometer" aria-hidden="true"></i> Tableau de bord | </a>
-		
-		
+
+
 	</ul>
 
 	<!-- Properties -->
@@ -120,17 +120,17 @@
 				<div class="section_subtitle">Entrez les détails de votre objet</div>
 			</div>
 		</div>
-		<form action="/action_page.php" class="needs-validation" novalidate style="padding-top: 2.5em; padding-bottom: 2.5em;">
+		<form action="/troquer" class="needs-validation" novalidate style="padding-top: 2.5em; padding-bottom: 2.5em;">
 			<div class="row">
 				<div class="form-group col-sm-6">
 					<label for="uname">Nom de l'objet:</label>
-					<input type="text" class="form-control" id="name" placeholder="Enter username" name="name" required>
+					<input type="text" class="form-control" id="name" placeholder="Nom de l'objet" name="object-name" required>
 					<div class="valid-feedback">Valid.</div>
 					<div class="invalid-feedback">Quel est le nom de votre objet?</div>
 				</div>
 				<div class="form-group col-sm-6">
 					<label for="pwd">Catégorie:</label>
-					<select class="form-control" id="catergory" placeholder="Enter password" name="catergory" required>
+					<select class="form-control" id="catergory" placeholder="Enter password" name="category" required>
 						<option disabled selected>Catégorie</option>
 						<option value="electronique">Electronique</option>
 						<option value="immobilier">Immobilier</option>
@@ -142,11 +142,11 @@
 				</div>
 				<div class="form-group col-sm-12">
 					<label for="uname">Décrivez votre objet:</label>
-					<textarea class="form-control" rows="5" id="description" placeholder="Décrivez votre objet..." name="description" required></textarea>
+					<textarea class="form-control" rows="5" id="description" placeholder="Décrivez votre objet..." name="object-description" required></textarea>
 					<div class="valid-feedback">Valid.</div>
 					<div class="invalid-feedback">Décrivez votre objet:</div>
 				</div>
-				
+
 				<div class="form-group col-sm-12" style="display: none;">
 					<input type="text" name="istroc" value="true">
 					<div class="invalid-feedback">Décrivez votre objet:</div>
@@ -186,7 +186,7 @@
 
 				<div class="form-group col-sm-6">
 					<label for="uname">Valorisez votre objet en CFA:</label>
-					<input type="number" class="form-control" id="value" placeholder="Entrez une valeur en CFA" name="value" required>
+					<input type="number" class="form-control" id="value" placeholder="Entrez une valeur en CFA" name="object-value" required>
 					<div class="valid-feedback">Valid.</div>
 					<div class="invalid-feedback">Quel est le nom de votre objet?</div>
 				</div>
@@ -201,19 +201,19 @@
 					</label>
 				</div>
 
-				
+
 			</div>
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
-	
+
 
 	</div>
 
-	
+
 	<!-- Newsletter -->
 
 	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ url_for('static', filename='images/newsletter.jpg') }}" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -241,7 +241,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3">
-						<div class="footer_logo"><a href="#"><img src="images/logo_large.png" alt=""></a></div>
+						<div class="footer_logo"><a href="#"><img src="{{ url_for('static', filename='images/logo_large.png') }}" alt=""></a></div>
 					</div>
 					<div class="col-lg-9 d-flex flex-column align-items-start justify-content-end">
 						<div class="footer_title">Dernières trocs</div>
@@ -255,7 +255,7 @@
 					</div>
 					<div class="col-lg-3 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
-							<div><div class="footer_latest_image"><img src="images/footer_latest_1.jpg" alt=""></div></div>
+							<div><div class="footer_latest_image"><img src="{{ url_for('static', filename='images/footer_latest_1.jpg') }}" alt=""></div></div>
 							<div class="footer_latest_content">
 								<div class="footer_latest_location">Porto-Novo</div>
 								<div class="footer_latest_name"><a href="#">Grande maison</a></div>
@@ -265,7 +265,7 @@
 					</div>
 					<div class="col-lg-3 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
-							<div><div class="footer_latest_image"><img src="images/footer_latest_2.jpg" alt=""></div></div>
+							<div><div class="footer_latest_image"><img src="{{ url_for('static', filename='images/footer_latest_2.jpg') }}" alt=""></div></div>
 							<div class="footer_latest_content">
 								<div class="footer_latest_location">Cotonou</div>
 								<div class="footer_latest_name"><a href="#">Camry 2015</a></div>
@@ -275,7 +275,7 @@
 					</div>
 					<div class="col-lg-3 footer_col">
 						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
-							<div><div class="footer_latest_image"><img src="images/footer_latest_3.jpg" alt=""></div></div>
+							<div><div class="footer_latest_image"><img src="{{ url_for('static', filename='images/footer_latest_3.jpg') }}" alt=""></div></div>
 							<div class="footer_latest_content">
 								<div class="footer_latest_location">Abomey</div>
 								<div class="footer_latest_name"><a href="#">Parcelle de terre</a></div>
@@ -313,18 +313,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/properties.js"></script>
+<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='styles/bootstrap4/popper.js') }}"></script>
+<script src="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/greensock/TweenMax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/greensock/TimelineMax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/scrollmagic/ScrollMagic.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/greensock/animation.gsap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/greensock/ScrollToPlugin.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='') }}plugins/easing/easing.js"></script>
+<script src="{{ url_for('static', filename='') }}plugins/parallax-js-master/parallax.min.js"></script>
+<script src="{{ url_for('static', filename='js/properties.js') }}"></script>
 
 <!-- Form validation script -->
 <script>
