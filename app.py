@@ -1,17 +1,15 @@
-
 from flask import Flask, render_template, url_for, request, session, redirect, Markup, flash
 from controllers import login, logout, index, apropos, contacter, trocs, register, dashboard
 import sys
 sys.path.append("..")
-import clientQueries
-
-
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
-
-
 #This is the route that leads to the index page
+@app.route('/')
+def index():
+    return index.index()
+
 @app.route('/')
 def index():
     return index.index()
@@ -42,14 +40,12 @@ def trocs():
     return trocs.trocs()
 
 # This is the route for client dashboard
-
 @app.route('/dashboard')
 def dashboard():
     return dashboard.dashboard()
 
 @app.route('/logout')
 def logout():
-    
     return logout.logout()
 
 if __name__ == '__main__':

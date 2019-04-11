@@ -1,4 +1,4 @@
-import json, tempfile
+import json
 from pymongo import MongoClient
 
 try:
