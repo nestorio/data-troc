@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Acceuil | TrocBenin</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Bluesky template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.css') }}">
+<link href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/animate.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main_styles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.css') }}">
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="logo">
+                            <a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></a>
+                        </div>
+                        <nav class="main_nav">
+                            <ul>
+                                <li class="active"><a href="index.html">Acceuil</a></li>
+                                <li><a href="about.html">A propos</a></li>
+                                <li><a href="trocs.html">Trocs</a></li>
+                                <li><a href="news.html">Journal</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="phone_num ml-auto">
+                            <div class="phone_num_inner">
+                                <span><a href="#" style="color: white;"><i class="fa fa-user-o" aria-hidden="true"></i> Mon Compte </a></span>
+                            </div>
+                        </div>
+                        <div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	<!-- Menu -->
+
+	<div class="menu trans_500">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<div class="menu_close_container"><div class="menu_close"></div></div>
+			<div class="logo menu_logo">
+				<a href="#">
+					<div class="logo_container d-flex flex-row align-items-start justify-content-start">
+						<div class="logo_image"><div><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></div></div>
+					</div>
+				</a>
+			</div>
+			<ul>
+				<li class="menu_item"><a href="index.html">Acceuil</a></li>
+				<li class="menu_item"><a href="about.html">A propos</a></li>
+				<li class="menu_item"><a href="trocs.html">Trocs</a></li>
+				<li class="menu_item"><a href="news.html">Journal</a></li>
+				<li class="menu_item"><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+
+		<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+				
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="home_slider_background" style="background-image:url({{ url_for('static', filename='images/immobilier.jpg') }})"></div>
+					<div class="slide_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="slide_content">
+										<div class="home_subtitle">Troquer au Benin</div>
+										<div class="home_title">TrocBenin</div>
+										<div class="home_details">
+											<ul class="home_details_list d-flex flex-row align-items-center justify-content-start">
+												<li>
+													<div class="home_details_image"><i style="color: white;" class="fa fa-mobile" aria-hidden="true"></i></div>
+													<span> 650 Electronique</span>
+												</li>
+												<li>
+													<div class="home_details_image"><i style="color: white;" class="fa fa-home" aria-hidden="true"></i></div>
+													<span> 3 Immobilier</span>
+												</li>
+												<li>
+													<div class="home_details_image"><i style="color: white;" class="fa fa-car" aria-hidden="true"></i></div>
+													<span> 2 Vehicule</span>
+												</li>
+												<li>
+													<div class="home_details_image"><i style="color: white;" class="fa fa-male" aria-hidden="true"></i></div>
+													<span> 2 Vêtements</span>
+												</li>
+											</ul>
+										</div>
+										<div class="home_price">Cherchez un objet</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="home_slider_background" style="background-image:url({{ url_for('static', filename='images/vehicules.jpg') }})"></div>
+					<div class="slide_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="slide_content">
+										<!-- 
+										<div class="home_subtitle">super offer</div>
+										<div class="home_title">Villa with sea view</div>
+										<div class="home_details">
+											<ul class="home_details_list d-flex flex-row align-items-center justify-content-start">
+												<li>
+													<div class="home_details_image"><img src="images/icon_1.png" alt=""></div>
+													<span> 650 Ftsq</span>
+												</li>
+												<li>
+													<div class="home_details_image"><img src="images/icon_2.png" alt=""></div>
+													<span> 3 Bedrooms</span>
+												</li>
+												<li>
+													<div class="home_details_image"><img src="images/icon_3.png" alt=""></div>
+													<span> 2 Bathrooms</span>
+												</li>
+											</ul>
+										</div>
+										<div class="home_price">$ 1. 245 999</div>
+										-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="home_slider_background" style="background-image:url({{ url_for('static', filename='css/style1.css') }}images/electroniques.jpg)"></div>
+					<div class="slide_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="slide_content">
+										<!--
+										<div class="home_subtitle">super offer</div>
+										<div class="home_title">Villa with sea view</div>
+										<div class="home_details">
+											<ul class="home_details_list d-flex flex-row align-items-center justify-content-start">
+												<li>
+													<div class="home_details_image"><img src="images/icon_1.png" alt=""></div>
+													<span> 650 Ftsq</span>
+												</li>
+												<li>
+													<div class="home_details_image"><img src="images/icon_2.png" alt=""></div>
+													<span> 3 Bedrooms</span>
+												</li>
+												<li>
+													<div class="home_details_image"><img src="images/icon_3.png" alt=""></div>
+													<span> 2 Bathrooms</span>
+												</li>
+											</ul>
+										</div>
+										<div class="home_price">$ 1. 245 999</div>
+									-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Home Search -->
+	<div class="home_search">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_search_container">
+						<div class="home_search_content">
+							<form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start">
+								<div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
+									<div style="min-width: 50%;">
+										<input placeholder="Rechercher..." class="search_form_select" style="background: transparent;" type="text" name="searchquery">
+										
+									</div>
+									<div>
+										<select class="search_form_select">
+											<option disabled selected>Categorie</option>
+											<option>Immobilier</option>
+											<option>Vehicule</option>
+											<option>Electronique</option>
+											<option>Vêtements</option>
+										</select>
+									</div>
+									<div>
+										        
+										<select class="search_form_select">
+											<option disabled selected>Ville</option>
+											<option>Abomey</option>
+											<option>Allada</option>
+											<option>Aplahoué</option>
+											<option>Cotonou</option>
+											<option>Dassa-Zoumé</option>
+											<option>Djougou</option>
+											<option>Kandi</option>
+											<option>Lokossa</option>
+											<option>Natitingou</option>
+											<option>Parakou</option>
+											<option>Pobè</option>
+											<option>Porto-Novo</option>
+	
+										</select>
+									</div>
+									
+								</div>
+								<button class="search_form_button ml-auto">Rechercher</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Recent -->
+
+	<div class="recent">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title">Dernières annonces de troc déposées</div>
+					<div class="section_subtitle">Parcourir les annonces récentes</div>
+				</div>
+			</div>
+			<div class="row recent_row">
+				<div class="col">
+					<div class="recent_slider_container">
+						<div class="owl-carousel owl-theme recent_slider">
+							
+							<!-- Slide -->
+							<div class="owl-item">
+								<div class="recent_item">
+									<div class="recent_item_inner">
+										<div class="recent_item_image">
+											<img src="{{ url_for('static', filename='images/property_1.jpg') }}" alt="">
+											<div class="tag_featured property_tag"><a href="#">Immobilier</a></div>
+										</div>
+										<div class="recent_item_body text-center">
+											<div class="recent_item_location">Cotonou</div>
+											<div class="recent_item_title"><a href="property.html">Appartement</a></div>
+											<div class="recent_item_price">1,500,000 CFA</div>
+										</div>
+										<div class="recent_item_footer d-flex flex-row align-items-center justify-content-start">
+											<div><div class="recent_icon"><i class="fa fa-hashtag" aria-hidden="true"></i></div><span>6 propos</span></div><div><div class="recent_icon"><i class="fa fa-bullseye" style="color: #32f996;" aria-hidden="true"></i></div><span>Status: En troc</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="owl-item">
+								<div class="recent_item">
+									<div class="recent_item_inner">
+										<div class="recent_item_image">
+											<img src="{{ url_for('static', filename='images/property_2.jpg') }}" alt="">
+											<div class="tag_offer property_tag"><a href="#">Vehicule</a></div>
+										</div>
+										<div class="recent_item_body text-center">
+											<div class="recent_item_location">Porto Novo</div>
+											<div class="recent_item_title"><a href="property.html">Mercedes ML</a></div>
+											<div class="recent_item_price">15,000,000 CFA</div>
+										</div>
+										<div class="recent_item_footer d-flex flex-row align-items-center justify-content-start">
+											<div><div class="recent_icon"><i class="fa fa-hashtag" aria-hidden="true"></i></div><span>2 propos</span></div><div><div class="recent_icon"><i class="fa fa-bullseye" style="color: #dc3545;" aria-hidden="true"></i></div><span>Status: Troquer</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="owl-item">
+								<div class="recent_item">
+									<div class="recent_item_inner">
+										<div class="recent_item_image">
+											<img src="{{ url_for('static', filename='images/property_3.jpg') }}" alt="">
+											<div class="tag_featured property_tag"><a href="#">Vetement</a></div>
+										</div>
+										<div class="recent_item_body text-center">
+											<div class="recent_item_location">Un Timberland tout neuf</div>
+											<div class="recent_item_title"><a href="property.html">Calavi</a></div>
+											<div class="recent_item_price">25,000 CFA</div>
+										</div>
+										<div class="recent_item_footer d-flex flex-row align-items-center justify-content-start">
+											<div><div class="recent_icon"><i class="fa fa-hashtag" aria-hidden="true"></i></div><span>2 propos</span></div><div><div class="recent_icon"><i class="fa fa-bullseye" style="color: #32f996;" aria-hidden="true"></i></div><span>Status: En troc</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="recent_slider_nav_container d-flex flex-row align-items-start justify-content-start">
+							<div class="recent_slider_nav recent_slider_prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+							<div class="recent_slider_nav recent_slider_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+						</div>
+					</div>
+					<div class="button recent_button"><a href="#">Voir plus</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Cities -->
+
+	<div class="cities">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title">Trouvez des trocs dans ces villes</div>
+					<div class="section_subtitle">Rechercher dans ces villes</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="cities_container d-flex flex-row flex-wrap align-items-start justify-content-between">
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_1.jpg') }}" alt="https://unsplash.com/@dnevozhai">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Abomey</div>
+						<div class="city_subtitle">Rentals from $450/month</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_2.jpg') }}" alt="https://unsplash.com/@lachlanjdempsey">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Allada</div>
+						<div class="city_subtitle">Rentals from $450/month</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_3.jpg') }}" alt="https://unsplash.com/@hellolightbulb">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Aplahoué</div>
+						<div class="city_subtitle">Rentals from $450/month</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_4.jpg') }}" alt="https://unsplash.com/@justinbissonbeck">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Cotonou</div>
+						<div class="city_subtitle">Trouvez des trocs à Cotonou</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_5.jpg') }}" alt="https://unsplash.com/@claudiotrigueros">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Dassa-Zoumé</div>
+						<div class="city_subtitle">Trouvez des trocs à Dassa-Zoumé</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_6.jpg') }}" alt="https://unsplash.com/@andersjilden">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Djougou</div>
+						<div class="city_subtitle">Trouvez des trocs à Djougou</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_7.jpg') }}" alt="https://unsplash.com/@sawyerbengtson">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Kandi</div>
+						<div class="city_subtitle">Trouvez des trocs à Kandi</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_8.jpg') }}" alt="https://unsplash.com/@mathewwaters">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Lokossa</div>
+						<div class="city_subtitle">Trouvez des trocs à Lokossa</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_8.jpg') }}" alt="https://unsplash.com/@mathewwaters">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Natitingou</div>
+						<div class="city_subtitle">Trouvez des trocs à Natitingou</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_8.jpg') }}" alt="https://unsplash.com/@mathewwaters">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Parakou</div>
+						<div class="city_subtitle">Trouvez des trocs à Parakou</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_8.jpg') }}" alt="https://unsplash.com/@mathewwaters">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Pobè</div>
+						<div class="city_subtitle">Trouvez des trocs à Pobè</div>
+					</a>	
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="city">
+				<img src="{{ url_for('static', filename='images/city_8.jpg') }}" alt="https://unsplash.com/@mathewwaters">
+				<div class="city_overlay">
+					<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+						<div class="city_title">Porto-Novo</div>
+						<div class="city_subtitle">Trouvez des trocs à Porto-Novo</div>
+					</a>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Testimonials -->
+
+	<div class="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title">Que disent les troquer?</div>
+					<div class="section_subtitle">Vous pouvez troquer aussi</div>
+				</div>
+			</div>
+			<div class="row testimonials_row">
+				
+				<!-- Testimonial Item -->
+				<div class="col-lg-4 testimonial_col">
+					<div class="testimonial">
+						<div class="testimonial_title">J'ai échangé mon parcelle de Terre</div>
+						<div class="testimonial_text">J'avais essayé de vendre ce pays depuis si longtemps à Allada. Grâce à TrocBenin, j'ai échangé le terrain contre un autre à Cotonou sans effort </div>
+						<div class="testimonial_author_image"><img src="{{ url_for('static', filename='images/testimonial_1.jpg') }}" alt=""></div>
+						<div class="testimonial_author"><a href="#">Nestor Gnoguem</a><span>, Client</span></div>
+						<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
+					</div>
+				</div>
+
+				<!-- Testimonial Item -->
+				<div class="col-lg-4 testimonial_col">
+					<div class="testimonial">
+						<div class="testimonial_title">Facile à Troquer</div>
+						<div class="testimonial_text">Honnêtement, c’est l’une des plateformes les plus simples que j’ai jamais utilisées en ligne. J'aime aussi l'équipe de support en ligne toujours disponible de TrocBenin</div>
+						<div class="testimonial_author_image"><img src="{{ url_for('static', filename='images/testimonial_2.jpg') }}" alt=""></div>
+						<div class="testimonial_author"><a href="#">Isaac Hounge</a><span>, Client</span></div>
+						<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
+					</div>
+				</div>
+
+				<!-- Testimonial Item -->
+				<div class="col-lg-4 testimonial_col">
+					<div class="testimonial">
+						<div class="testimonial_title">Très bonne communication</div>
+						<div class="testimonial_text">Cette plateforme m'informe toujours de l'état de mon Troc. Je suis averti chaque fois que quelqu'un propose quelque chose et c'est incroyable</div>
+						<div class="testimonial_author_image"><img src="{{ url_for('static', filename='images/testimonial_3.jpg') }}" alt=""></div>
+						<div class="testimonial_author"><a href="#">Aziz</a><span>, Client</span></div>
+						<div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ url_for('static', filename='images/newsletter.jpg') }}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter_content d-flex flex-lg-row flex-column align-items-start justify-content-start">
+						<div class="newsletter_title_container">
+							<div class="newsletter_title">Abonnez-vous à notre journal</div>
+							<div class="newsletter_subtitle">Soyez le premier à être informé de nos offres</div>
+						</div>
+						<div class="newsletter_form_container">
+							<form action="#" class="newsletter_form">
+								<input type="email" class="newsletter_input" placeholder="Votre adresse email..." required="required">
+								<button class="newsletter_button">Abonnez-vous</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="footer_main">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="footer_logo"><a href="#"><img src="{{ url_for('static', filename='images/logo_large.png') }}" alt=""></a></div>
+					</div>
+					<div class="col-lg-9 d-flex flex-column align-items-start justify-content-end">
+						<div class="footer_title">Dernières trocs</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 footer_col">
+						<div class="footer_about">
+							<div class="footer_about_text">TrocBenin est là pour vous mettre en relation avec des personnes intéressées à troquer avec vous. N'hésitez pas à contacter notre équipe d'assistance pour obtenir de l'aide.</div>
+						</div>
+					</div>
+					<div class="col-lg-3 footer_col">
+						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
+							<div><div class="footer_latest_image"><img src="{{ url_for('static', filename='images/footer_latest_1.jpg') }}" alt=""></div></div>
+							<div class="footer_latest_content">
+								<div class="footer_latest_location">Porto-Novo</div>
+								<div class="footer_latest_name"><a href="#">Grande maison</a></div>
+								<div class="footer_latest_price">30,000,000 CFA</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 footer_col">
+						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
+							<div><div class="footer_latest_image"><img src="{{ url_for('static', filename='images/footer_latest_2.jpg') }}" alt=""></div></div>
+							<div class="footer_latest_content">
+								<div class="footer_latest_location">Cotonou</div>
+								<div class="footer_latest_name"><a href="#">Camry 2015</a></div>
+								<div class="footer_latest_price">2,000,000 CFA</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 footer_col">
+						<div class="footer_latest d-flex flex-row align-items-start justify-content-start">
+							<div><div class="footer_latest_image"><img src="{{ url_for('static', filename='images/footer_latest_3.jpg') }}" alt=""></div></div>
+							<div class="footer_latest_content">
+								<div class="footer_latest_location">Abomey</div>
+								<div class="footer_latest_name"><a href="#">Parcelle de terre</a></div>
+								<div class="footer_latest_price">1,000,000 CFA</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="footer_bar_content d-flex flex-row align-items-center justify-content-start">
+							<div class="cr"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">BigDataConeference IMSP</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</div>
+							<div class="footer_nav">
+								<ul>
+									<li><a href="index.html">Acceuil</a></li>
+									<li><a href="#">A propos</a></li>
+									<li><a href="trocs.html">Trocs</a></li>
+									<li><a href="news.html">Journal</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</div>
+							<div class="footer_phone ml-auto"><span>appelez nous: </span>(+229)61 740 074 / (+229)91 409 530 / (+229)97 770 636</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='styles/bootstrap4/popper.js') }}"></script>
+<script src="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/easing/easing.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/parallax-js-master/parallax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+</body>
+</html>

@@ -1,13 +1,20 @@
 
+
 from flask import Flask, render_template, url_for, request, session, redirect, Markup, flash
 from controllers import login, logout, index, apropos, contacter, trocs, register, dashboard
+
 import sys
 sys.path.append("..")
-import clientQueries
 
 
+#import pymongo
+#from flask_jwt_extended import JWTmanager
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+#app.config['MONGO_URI'] = 'mongodb://charly:Gobem1996.@trocbenin-shard-00-00-diyz7.mongodb.net:27017,trocbenin-shard-00-01-diyz7.mongodb.net:27017,trocbenin-shard-00-02-diyz7.mongodb.net:27017/test?ssl=true&replicaSet=TrocBenin-shard-0&authSource=admin&retryWrites=true'
+#mongo = PyMongo(app)
+#client = pymongo.MongoClient("mongodb://charly:Gobem1996.@trocbenin-shard-00-00-diyz7.mongodb.net:27017,trocbenin-shard-00-01-diyz7.mongodb.net:27017,trocbenin-shard-00-02-diyz7.mongodb.net:27017/test?ssl=true&replicaSet=TrocBenin-shard-0&authSource=admin&retryWrites=true")
+#db = client.test
 
 
 
@@ -36,10 +43,12 @@ def apropos():
 def contacter():
     return contacter.contacter()
 
+
 # This si the toute for trocs
 @app.route('/trocs')
 def trocs():
     return trocs.trocs()
+
 
 # This is the route for client dashboard
 
@@ -49,8 +58,8 @@ def dashboard():
 
 @app.route('/logout')
 def logout():
-    
     return logout.logout()
 
 if __name__ == '__main__':
     app.run(debug=True)
+
